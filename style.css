@@ -8,21 +8,51 @@
     
 }
 
-#leftPanel{
-    display: flex;
-    align-items: center;
-
-}
 #game-board{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    height: 100%;
+    width: 50%;
     
 
 }
+
+#leftPanel{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 30%;
+    border: 2px solid black;
+
+}
+#rightPanel{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    border: 2px solid black;
+
+}
+#pOne{
+    border: 2px solid black;
+}
+#pTwo{
+    border: 2px solid black;
+}
+
 #board{
     /* background-color: green; */
+}
+.instructions, .object{
+    text-align: center;
+    text-decoration: underline
+}
+gameMode{
+    border: 1px solid black;
+    text-align: center;
 }
 button{
     display: block;

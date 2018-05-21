@@ -18,14 +18,18 @@
             <h2>A game designed by PLF</h2>
         </header>
         <div id="leftPanel">
-        <section >
-            <button id="PvC">1 Player</button>
-            <button id="PvP">2 Player</button>
+            <section>
+                <div id="gameMode">
+                <h4>Game Mode: </h4>
+                <button id="PvC">1 Player</button>
+                <button id="PvP">2 Player</button>
+                </div>
+                <h4 class="object">Object</h4>
 
-            <h4>Instructions</h4>
-            <!-- This is where my instructions will go for the game -->
-            <p></p>
-        </section>
+                <h4 class="instructions">Instructions</h4>
+                <!-- This is where my instructions will go for the game -->
+                <p>Hello and welcome to the game of Connect Four. Each Player will be assigned a checker color (Red or Yellow).</p>
+            </section>
         </div>
 
         <!-- this is the actual game board -->
@@ -85,16 +89,20 @@
 
         </div>
 
-        <aside id="rightPanel">
+        <section id="rightPanel">
             <div id="pOne">
                 <h4></h4>
-                <span></span>
+                <p>Win Counter:
+                    <span id="winOne"></span>
+                </p>
             </div>
             <div id="pTwo">
                 <h4></h4>
-                <span></span>
+                <p>Win Counter
+                    <span></span>
+                </p>
             </div>
-        </aside>
+        </section>
     </div>
     <footer>
         <h5>Link to our developers handles:
