@@ -5,6 +5,9 @@ This choice as a Project 1 scares me and I am willing to accept the challenge an
 
 
 BitBalloon url:
+
 Trello url: https://trello.com/b/XhjATeAF/wdi16-project-1-connect-four
+
 Wireframe (Simple): included in Trello
+
 Technologies, Libraries, and/or Frameworks:
