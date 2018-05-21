@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <title>Connect Four by PLFtheWD7</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <h1>Connect Four</h1>
+            <h2>A game designed by PLF</h2>
+        </header>
+        <div id="leftPanel">
+        <section >
+            <button id="PvC">1 Player</button>
+            <button id="PvP">2 Player</button>
+
+            <h4>Instructions</h4>
+            <!-- This is where my instructions will go for the game -->
+            <p></p>
+        </section>
+        </div>
+
+        <!-- this is the actual game board -->
+        <div id="game-board">
+            <div id="board">
+                <span class="play" column="0">7</span>
+                <span class="play" column="1">7</span>
+                <span class="play" column="2">7</span>
+                <span class="play" column="3">7</span>
+                <span class="play" column="4">7</span>
+                <span class="play" column="5">7</span>
+                <span class="play" column="6">7</span>
+                <br>
+                <span class="play" column="0">7</span>
+                <span class="play" column="1">7</span>
+                <span class="play" column="2">7</span>
+                <span class="play" column="3">7</span>
+                <span class="play" column="4">7</span>
+                <span class="play" column="5">7</span>
+                <span class="play" column="6">7</span>
+                <br>
+                <span class="play" column="0">7</span>
+                <span class="play" column="1">7</span>
+                <span class="play" column="2">7</span>
+                <span class="play" column="3">7</span>
+                <span class="play" column="4">7</span>
+                <span class="play" column="5">7</span>
+                <span class="play" column="6">7</span>
+                <br>
+                <span class="play" column="0">7</span>
+                <span class="play" column="1">7</span>
+                <span class="play" column="2">7</span>
+                <span class="play" column="3">7</span>
+                <span class="play" column="4">7</span>
+                <span class="play" column="5">7</span>
+                <span class="play" column="6">7</span>
+                <br>
+                <span class="play" column="0">7</span>
+                <span class="play" column="1">7</span>
+                <span class="play" column="2">7</span>
+                <span class="play" column="3">7</span>
+                <span class="play" column="4">7</span>
+                <span class="play" column="5">7</span>
+                <span class="play" column="6">7</span>
+                <br>
+                <span class="play" column="0">7</span>
+                <span class="play" column="1">7</span>
+                <span class="play" column="2">7</span>
+                <span class="play" column="3">7</span>
+                <span class="play" column="4">7</span>
+                <span class="play" column="5">7</span>
+                <span class="play" column="6">7</span>
+                <br>
+
+
+            </div>
+
+        </div>
+
+        <aside id="rightPanel">
+            <div id="pOne">
+                <h4></h4>
+                <span></span>
+            </div>
+            <div id="pTwo">
+                <h4></h4>
+                <span></span>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <h5>Link to our developers handles:
+            <a href="https://twitter.com/PLFtheWD7" class="tweet">Twitter</a>
+            <a href="https://github.com/plaifang7" class="git">GitHub</a>
+            <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked">LinkedIn</a>
+        </h5>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
