@@ -1,3 +1,48 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+ } 
+.title{
+   grid-column: 2 / 3;
+   grid-row: 1;
+    
+    
+}
+.game-board{
+    grid-column: 2 / 3;
+    grid-row: 2;
+  
+}
+.leftPanel{
+    grid-column: 1;
+    grid-row: 2;
+   
+}
+.foot{
+    grid-column: 2 / 3;
+    grid-row: 3;
+}
+.rightPanel{
+grid-column: 4;
+   grid-row: 2;
+
+}
+button {
+    display: block;
+    padding: 10px;
+    width: 100px;
+    margin: 15px;
+    background-color: red;
+    border-radius: 50px;
+}
+button:focus {
+    outline: none;
+}
+button:hover{
+    background-color: yellow;
+}
 .play{
     color: white;
     font-size: 65px;
@@ -8,34 +53,7 @@
     
 }
 
-#game-board{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    height: 100%;
-    width: 50%;
-    
-
-}
-
-#leftPanel{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    width: 30%;
-    border: 2px solid black;
-
-}
-#rightPanel{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 30%;
-    border: 2px solid black;
-
-}
+/*
 #pOne{
     border: 2px solid black;
 }
@@ -49,25 +67,10 @@
 .instructions, .object{
     text-align: center;
     text-decoration: underline
-}
-gameMode{
+} */
+/* gameMode{
     border: 1px solid black;
-    text-align: center;
+    text-align: center; */
 }
-button{
-    display: block;
-    padding: 10px;
-    width: 100px;
-    margin: 15px;
-    background-color: red;
-    border-radius: 50px;
-}
-h1{
-    margin: 0 auto;
-    text-align: center;
 
-}
-h2{
-    text-align: center;
-    text-decoration: underline;
-}
+

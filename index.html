@@ -13,105 +13,110 @@
 
 <body>
     <div class="container">
+        <div class="title">
+            <header>
+                <h1>Connect Four</h1>
+                <h2>A game designed by PLF</h2>
+            </header>
+        </div>
         <header>
-            <h1>Connect Four</h1>
-            <h2>A game designed by PLF</h2>
-        </header>
-        <div id="leftPanel">
-            <section>
-                <div id="gameMode">
-                <h4>Game Mode: </h4>
-                <button id="PvC">1 Player</button>
-                <button id="PvP">2 Player</button>
+            <div class="leftPanel">
+                <section>
+                    <div id="gameMode">
+                        <h4>Game Mode: </h4>
+                        <button id="PvC">1 Player</button>
+                        <button id="PvP">2 Player</button>
+                    </div>
+                    <h4 class="object">Object</h4>
+                    <p>Be the first player to get four of your chekers in a row.</p>
+
+                    <h4 class="instructions">Instructions</h4>
+                    <!-- This is where my instructions will go for the game -->
+                    <p>Hello and welcome to the game of Connect Four. Each Player will be assigned a checker color (Red or Yellow).</p>
+                </section>
+            </div>
+
+            <!-- this is the actual game board -->
+            <div class="game-board">
+                <div id="board">
+                    <span class="play" column="0">7</span>
+                    <span class="play" column="1">7</span>
+                    <span class="play" column="2">7</span>
+                    <span class="play" column="3">7</span>
+                    <span class="play" column="4">7</span>
+                    <span class="play" column="5">7</span>
+                    <span class="play" column="6">7</span>
+                    <br>
+                    <span class="play" column="0">7</span>
+                    <span class="play" column="1">7</span>
+                    <span class="play" column="2">7</span>
+                    <span class="play" column="3">7</span>
+                    <span class="play" column="4">7</span>
+                    <span class="play" column="5">7</span>
+                    <span class="play" column="6">7</span>
+                    <br>
+                    <span class="play" column="0">7</span>
+                    <span class="play" column="1">7</span>
+                    <span class="play" column="2">7</span>
+                    <span class="play" column="3">7</span>
+                    <span class="play" column="4">7</span>
+                    <span class="play" column="5">7</span>
+                    <span class="play" column="6">7</span>
+                    <br>
+                    <span class="play" column="0">7</span>
+                    <span class="play" column="1">7</span>
+                    <span class="play" column="2">7</span>
+                    <span class="play" column="3">7</span>
+                    <span class="play" column="4">7</span>
+                    <span class="play" column="5">7</span>
+                    <span class="play" column="6">7</span>
+                    <br>
+                    <span class="play" column="0">7</span>
+                    <span class="play" column="1">7</span>
+                    <span class="play" column="2">7</span>
+                    <span class="play" column="3">7</span>
+                    <span class="play" column="4">7</span>
+                    <span class="play" column="5">7</span>
+                    <span class="play" column="6">7</span>
+                    <br>
+                    <span class="play" column="0">7</span>
+                    <span class="play" column="1">7</span>
+                    <span class="play" column="2">7</span>
+                    <span class="play" column="3">7</span>
+                    <span class="play" column="4">7</span>
+                    <span class="play" column="5">7</span>
+                    <span class="play" column="6">7</span>
+                    <br>
+
+
                 </div>
-                <h4 class="object">Object</h4>
-
-                <h4 class="instructions">Instructions</h4>
-                <!-- This is where my instructions will go for the game -->
-                <p>Hello and welcome to the game of Connect Four. Each Player will be assigned a checker color (Red or Yellow).</p>
-            </section>
-        </div>
-
-        <!-- this is the actual game board -->
-        <div id="game-board">
-            <div id="board">
-                <span class="play" column="0">7</span>
-                <span class="play" column="1">7</span>
-                <span class="play" column="2">7</span>
-                <span class="play" column="3">7</span>
-                <span class="play" column="4">7</span>
-                <span class="play" column="5">7</span>
-                <span class="play" column="6">7</span>
-                <br>
-                <span class="play" column="0">7</span>
-                <span class="play" column="1">7</span>
-                <span class="play" column="2">7</span>
-                <span class="play" column="3">7</span>
-                <span class="play" column="4">7</span>
-                <span class="play" column="5">7</span>
-                <span class="play" column="6">7</span>
-                <br>
-                <span class="play" column="0">7</span>
-                <span class="play" column="1">7</span>
-                <span class="play" column="2">7</span>
-                <span class="play" column="3">7</span>
-                <span class="play" column="4">7</span>
-                <span class="play" column="5">7</span>
-                <span class="play" column="6">7</span>
-                <br>
-                <span class="play" column="0">7</span>
-                <span class="play" column="1">7</span>
-                <span class="play" column="2">7</span>
-                <span class="play" column="3">7</span>
-                <span class="play" column="4">7</span>
-                <span class="play" column="5">7</span>
-                <span class="play" column="6">7</span>
-                <br>
-                <span class="play" column="0">7</span>
-                <span class="play" column="1">7</span>
-                <span class="play" column="2">7</span>
-                <span class="play" column="3">7</span>
-                <span class="play" column="4">7</span>
-                <span class="play" column="5">7</span>
-                <span class="play" column="6">7</span>
-                <br>
-                <span class="play" column="0">7</span>
-                <span class="play" column="1">7</span>
-                <span class="play" column="2">7</span>
-                <span class="play" column="3">7</span>
-                <span class="play" column="4">7</span>
-                <span class="play" column="5">7</span>
-                <span class="play" column="6">7</span>
-                <br>
-
 
             </div>
 
-        </div>
-
-        <section id="rightPanel">
-            <div id="pOne">
-                <h4></h4>
-                <p>Win Counter:
-                    <span id="winOne"></span>
-                </p>
+            <div class="rightPanel">
+                <div id="pOne">
+                    <h4></h4>
+                    <p>Win Counter:
+                        <span id="winOne"></span>
+                    </p>
+                </div>
+                <div id="pTwo">
+                    <h4></h4>
+                    <p>Win Counter
+                        <span></span>
+                    </p>
+                </div>
             </div>
-            <div id="pTwo">
-                <h4></h4>
-                <p>Win Counter
-                    <span></span>
-                </p>
+            <div class="foot">
+                <footer>
+                    <h5>Link to our developers handles:
+                        <a href="https://twitter.com/PLFtheWD7" class="tweet">Twitter</a>
+                        <a href="https://github.com/plaifang7" class="git">GitHub</a>
+                        <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked">LinkedIn</a>
+                    </h5>
+                </footer>
             </div>
-        </section>
     </div>
-    <footer>
-        <h5>Link to our developers handles:
-            <a href="https://twitter.com/PLFtheWD7" class="tweet">Twitter</a>
-            <a href="https://github.com/plaifang7" class="git">GitHub</a>
-            <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked">LinkedIn</a>
-        </h5>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 
