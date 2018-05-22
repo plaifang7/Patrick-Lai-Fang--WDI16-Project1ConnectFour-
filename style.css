@@ -28,7 +28,7 @@ html{
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    border: 2px solid black;
+    border: 1px solid black;
     height: 100%;
     width: 100%;
     background-color: green;
@@ -37,7 +37,7 @@ html{
 .leftPanel{
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    border: 2px solid black;
+    border: 1px solid black;
    height: 100%;
    background-color: yellow;    
 }
@@ -51,7 +51,7 @@ html{
 .rightPanel{
     grid-column: 5 / 6;
    grid-row: 2;
-   border: 2px solid black;
+   border: 1px solid black;
    height: 100%;
    background-color: aliceblue;
 
