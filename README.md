@@ -12,4 +12,4 @@ Trello url: https://trello.com/b/XhjATeAF/wdi16-project-1-connect-four
 
 Wireframe (Simple): included in Trello
 
-Technologies, Libraries, and/or Frameworks:
+Technologies, Libraries, and/or Frameworks: CSS Grid
