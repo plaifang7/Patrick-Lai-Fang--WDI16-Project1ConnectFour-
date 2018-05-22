@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
@@ -12,14 +13,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="content">
         <div class="title">
-            <header>
-                <h1>Connect Four</h1>
-                <h2>A game designed by PLF</h2>
-            </header>
+
+            <h1>Connect Four</h1>
+            <h2>A game designed by PLF</h2>
+
         </div>
-        <header>
+    
             <div class="leftPanel">
                 <section>
                     <div id="gameMode">
@@ -39,7 +40,7 @@
             <!-- this is the actual game board -->
             <div class="game-board">
                 <div id="board">
-                    <span class="play" column="0">7</span>
+                    <!-- <span class="play" column="0">7</span>
                     <span class="play" column="1">7</span>
                     <span class="play" column="2">7</span>
                     <span class="play" column="3">7</span>
@@ -87,34 +88,34 @@
                     <span class="play" column="5">7</span>
                     <span class="play" column="6">7</span>
                     <br>
-
+ -->
 
                 </div>
 
             </div>
 
             <div class="rightPanel">
-                <div id="pOne">
-                    <h4></h4>
-                    <p>Win Counter:
-                        <span id="winOne"></span>
-                    </p>
-                </div>
-                <div id="pTwo">
-                    <h4></h4>
-                    <p>Win Counter
-                        <span></span>
-                    </p>
-                </div>
+
+                <h4></h4>
+                <p>Win Counter:
+                    <span id="winOne"></span>
+                </p>
+
+
+                <h4></h4>
+                <p>Win Counter
+                    <span></span>
+                </p>
+
             </div>
             <div class="foot">
-                <footer>
-                    <h5>Link to our developers handles:
-                        <a href="https://twitter.com/PLFtheWD7" class="tweet">Twitter</a>
-                        <a href="https://github.com/plaifang7" class="git">GitHub</a>
-                        <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked">LinkedIn</a>
+                
+                    <h5>If you'd like to see more from our creator, click one of the following links:
+                        <a href="https://twitter.com/PLFtheWD7" class="tweet"><img src="/logo_twitter.png", alt="twitter", class="twitlogo"></a> 
+                        <a href="https://github.com/plaifang7" class="git"><img src="/github.png", alt="GitHub", class="gitlogo"></a>  
+                        <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked"><img src="/linkedin-logo.png", alt="LinkedIn", class="linkedin"></a>
                     </h5>
-                </footer>
+                
             </div>
     </div>
     <script src="script.js"></script>
