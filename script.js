@@ -13,17 +13,7 @@ const gameBoard = [
 gameBoard.start();
 }
 // console.log(gameBoard);
-const xcol = 7;
-const yrow = 6;
-for(let col = 0; col < xcol.length; col++){
-    
-    for(let row = 0; row < yrow.length; row++){
-        .attr('grid', col)
-        .attr('gridrow', row);
-    }
 
-    
-}
 
 
 
