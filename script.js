@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-
+alert("Welcome to Connect 4! Choose a Game Mode.")
+function startGame () {
 const gameBoard = [
     [0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0],
@@ -9,16 +10,29 @@ const gameBoard = [
     [0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0]
 ]
+gameBoard.start();
+}
 // console.log(gameBoard);
+const xcol = 7;
+const yrow = 6;
+for(let col = 0; col < xcol.length; col++){
+    
+    for(let row = 0; row < yrow.length; row++){
+        .attr('grid', col)
+        .attr('gridrow', row);
+    }
 
-cont playerTurn = 0;
-if( )
+    
+}
+
+
+
 
 $("game-board").mouseover(function(){
-    if (playerTurn === 1) {
+    if (playerOne) {
         grid.style.background = red;
     }
-    else if(playerTurn === 2){
+    else if(playerTwo){
         grid.style.background = yellow;
     }
 })
