@@ -20,103 +20,123 @@
             <h2>A game designed by PLF</h2>
 
         </div>
-    
-            <div class="leftPanel">
-                <section>
-                    <div id="gameMode">
-                        <h4>Game Mode: </h4>
-                        <button id="PvC">1 Player</button>
-                        <button id="PvP">2 Player</button>
-                    </div>
-                    <h4 class="object">Object</h4>
-                    <p>Be the first player to get four of your chekers in a row.</p>
 
-                    <h4 class="instructions">Instructions</h4>
-                    <!-- This is where my instructions will go for the game -->
-                    <p>Hello and welcome to the game of Connect Four. Each Player will be assigned a checker color (Red or Yellow).</p>
-                </section>
-            </div>
-
-            <!-- this is the actual game board -->
-            <div class="game-board">
-                <div id="board">
-                    <!-- <span class="play" column="0">7</span>
-                    <span class="play" column="1">7</span>
-                    <span class="play" column="2">7</span>
-                    <span class="play" column="3">7</span>
-                    <span class="play" column="4">7</span>
-                    <span class="play" column="5">7</span>
-                    <span class="play" column="6">7</span>
-                    <br>
-                    <span class="play" column="0">7</span>
-                    <span class="play" column="1">7</span>
-                    <span class="play" column="2">7</span>
-                    <span class="play" column="3">7</span>
-                    <span class="play" column="4">7</span>
-                    <span class="play" column="5">7</span>
-                    <span class="play" column="6">7</span>
-                    <br>
-                    <span class="play" column="0">7</span>
-                    <span class="play" column="1">7</span>
-                    <span class="play" column="2">7</span>
-                    <span class="play" column="3">7</span>
-                    <span class="play" column="4">7</span>
-                    <span class="play" column="5">7</span>
-                    <span class="play" column="6">7</span>
-                    <br>
-                    <span class="play" column="0">7</span>
-                    <span class="play" column="1">7</span>
-                    <span class="play" column="2">7</span>
-                    <span class="play" column="3">7</span>
-                    <span class="play" column="4">7</span>
-                    <span class="play" column="5">7</span>
-                    <span class="play" column="6">7</span>
-                    <br>
-                    <span class="play" column="0">7</span>
-                    <span class="play" column="1">7</span>
-                    <span class="play" column="2">7</span>
-                    <span class="play" column="3">7</span>
-                    <span class="play" column="4">7</span>
-                    <span class="play" column="5">7</span>
-                    <span class="play" column="6">7</span>
-                    <br>
-                    <span class="play" column="0">7</span>
-                    <span class="play" column="1">7</span>
-                    <span class="play" column="2">7</span>
-                    <span class="play" column="3">7</span>
-                    <span class="play" column="4">7</span>
-                    <span class="play" column="5">7</span>
-                    <span class="play" column="6">7</span>
-                    <br>
- -->
-
+        <div class="leftPanel">
+            <section>
+                <div id="gameMode">
+                    <h4>Game Mode: </h4>
+                    <button id="PvC">1 Player</button>
+                    <button id="PvP">2 Player</button>
                 </div>
+                <h4 class="object">Object</h4>
+                <p>Be the first player to get four of your chekers in a row.</p>
+
+                <h4 class="instructions">Instructions</h4>
+                <!-- This is where my instructions will go for the game -->
+                <p>Hello and welcome to the game of Connect Four. Each Player will be assigned a checker color (Red or Yellow).</p>
+            </section>
+        </div>
+
+        <!-- this is the actual game board -->
+        <div class="game-board">
+            <div class="grid col1">
+                <div class="gridrow col1row1"></div>
+                <div class="gridrow col1row2"></div>
+                <div class="gridrow col1row3"></div>
+                <div class="gridrow col1row4"></div>
+                <div class="gridrow col1row5"></div>
+                <div class="gridrow col1row6"></div>
 
             </div>
-
-            <div class="rightPanel">
-
-                <h4></h4>
-                <p>Win Counter:
-                    <span id="winOne"></span>
-                </p>
-
-
-                <h4></h4>
-                <p>Win Counter
-                    <span></span>
-                </p>
+            <div class="grid col2">
+                <div class="gridrow col2row1"></div>
+                <div class="gridrow col2row2"></div>
+                <div class="gridrow col2row3"></div>
+                <div class="gridrow col2row4"></div>
+                <div class="gridrow col2row5"></div>
+                <div class="gridrow col2row6"></div>
 
             </div>
-            <div class="foot">
-                
-                    <h5>If you'd like to see more from our creator, click one of the following links:
-                        <a href="https://twitter.com/PLFtheWD7" class="tweet"><img src="/logo_twitter.png", alt="twitter", class="twitlogo"></a> 
-                        <a href="https://github.com/plaifang7" class="git"><img src="/github.png", alt="GitHub", class="gitlogo"></a>  
-                        <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked"><img src="/linkedin-logo.png", alt="LinkedIn", class="linkedin"></a>
-                    </h5>
-                
+            <div class="grid col3">
+                <div class="gridrow col3row1"></div>
+                <div class="gridrow col3row2"></div>
+                <div class="gridrow col3row3"></div>
+                <div class="gridrow col3row4"></div>
+                <div class="gridrow col3row5"></div>
+                <div class="gridrow col3row6"></div>
             </div>
+
+            <div class="grid col4">
+                <div class="gridrow col4row1"></div>
+                <div class="gridrow col4row2"></div>
+                <div class="gridrow col4row3"></div>
+                <div class="gridrow col4row4"></div>
+                <div class="gridrow col4row5"></div>
+                <div class="gridrow col4row6"></div>
+            </div>
+            <div class="grid col5">
+                <div class="gridrow col5row1"></div>
+                <div class="gridrow col5row2"></div>
+                <div class="gridrow col5row3"></div>
+                <div class="gridrow col5row4"></div>
+                <div class="gridrow col5row5"></div>
+                <div class="gridrow col5row6"></div>
+            </div>
+            <div class="grid col6">
+                <div class="gridrow col6row1"></div>
+                <div class="gridrow col6row2"></div>
+                <div class="gridrow col6row3"></div>
+                <div class="gridrow col6row4"></div>
+                <div class="gridrow col6row5"></div>
+                <div class="gridrow col6row6"></div>
+            </div>
+            <div class="grid col7">
+                <div class="gridrow col7row1"></div>
+                <div class="gridrow col7row2"></div>
+                <div class="gridrow col7row3"></div>
+                <div class="gridrow col7row4"></div>
+                <div class="gridrow col7row5"></div>
+                <div class="gridrow col7row6"></div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="rightPanel">
+
+            <h4 id="redPlay">
+               Red: <input type="text" id="userOne">
+            </h4>
+            <p>Win Counter:
+                <span id="winOne"></span>
+            </p>
+
+            <h4 id="yellPlay">
+               Yellow: <input type="text" id="userOne">
+            </h4>
+            <p>Win Counter:
+                <span></span>
+            </p>
+
+        </div>
+        <div class="foot">
+
+            <h5>If you'd like to see more from our creator, click one of the following links:
+                <a href="https://twitter.com/PLFtheWD7" class="tweet">
+                    <img src="/logo_twitter.png" , alt="twitter" , class="twitlogo">
+                </a>
+                <a href="https://github.com/plaifang7" class="git">
+                    <img src="/github.png" , alt="GitHub" , class="gitlogo">
+                </a>
+                <a href="https://www.linkedin.com/in/patrick-lai-fang-67b78273/" class="linked">
+                    <img src="/linkedin-logo.png" , alt="LinkedIn" , class="linkedin">
+                </a>
+            </h5>
+
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

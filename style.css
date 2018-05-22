@@ -1,29 +1,40 @@
 #content{
     display: inline-grid;
-
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 175px 100% 100% 100px;
+
     
  } 
- #content div:nth-child(even){
+ /* #content div:nth-child(even){
      background: #777
- }
+ } */
 .title{
    grid-column: 2 / 5;
    grid-row: 1;
    text-align: center;
    margin: 0 auto;
+   height: 50%;
+   font-family: Raleway, sans-serif;
+   font-weight: bolder;
     
     
 }
 .game-board{
     grid-column: 2 / 5;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    background-color: green;
   
 }
 .leftPanel{
     grid-column: 1 / 2;
     grid-row: 2;
+    border: 2px solid black;
+    height: 100%;
    
 }
 .foot{
@@ -36,15 +47,27 @@
 .rightPanel{
 grid-column: 5 / 6;
    grid-row: 2;
+   border: 2px solid black;
+   height: 100%;
 
+}
+.grid{
+    display: grid;
+    
+}
+.gridrow{
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
 }
 button {
     display: block;
     padding: 10px;
     width: 100px;
-    margin: 15px;
+    margin: 0 auto;
     background-color: red;
     border-radius: 50px;
+    font-family: Raleway, sans-serif;
 }
 button:focus {
     outline: none;
@@ -52,15 +75,28 @@ button:focus {
 button:hover{
     background-color: yellow;
 }
-.play{
+#redPlay{
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Raleway, sans-serif;
+}
+#yellPlay{
+    color: rgb(212, 212, 10);
+    text-align: center;
+    text-decoration: underline; 
+    font-family: Raleway, sans-serif;
+}
+/* .play{
     color: white;
     font-size: 65px;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    background-color: white;    
+    width: 150px;
+    height: 100px;
+    padding: 0px;
+    background-color: white; 
+    border: 1px solid black;   
     
-}
+} */
 .twitlogo{
   width: 45px;
   height: 50px;
@@ -76,9 +112,26 @@ button:hover{
     height: 50px;
 }
 
+
 h5 { 
     font-size: 15px;
     font-family: Raleway, sans-serif;
+}
+
+.instructions, .object{
+    text-align: center;
+    text-decoration: underline
+}
+p{
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-size: 13px
+}
+h4{
+    text-align: center;
+    text-decoration: underline;
+    font-family: Raleway, sans-serif;
+
 }
 
 /*
@@ -89,13 +142,8 @@ h5 {
     border: 2px solid black;
 }
 
-#board{
-    /* background-color: green; */
-}
-/* .instructions, .object{
-    text-align: center;
-    text-decoration: underline
-} */
+
+
 /* gameMode{
     border: 1px solid black;
     text-align: center; */
