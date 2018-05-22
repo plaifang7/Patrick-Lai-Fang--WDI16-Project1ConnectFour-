@@ -1,8 +1,12 @@
+html{
+    background-color: beige;
+}
 #content{
     display: inline-grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 175px 100% 100% 100px;
-
+    grid-template-rows: 175px 2fr 1fr;
+    grid-auto-columns: minmax(300px, auto);
+    grid-auto-rows: minmax(175px, auto);
     
  } 
  /* #content div:nth-child(even){
@@ -32,16 +36,16 @@
 }
 .leftPanel{
     grid-column: 1 / 2;
-    grid-row: 2;
+    grid-row: 2 / 3;
     border: 2px solid black;
-    height: 100%;
-   
+   height: 100%;
+   background-color: yellow;    
 }
 .foot{
     grid-column: 1 / 6;
-    grid-row: 4;
+    grid-row: 3;
     text-align: center;
-    margin: 500px auto 0px auto;
+    margin: 200px auto 0px auto;
    
 }
 .rightPanel{
@@ -49,6 +53,7 @@ grid-column: 5 / 6;
    grid-row: 2;
    border: 2px solid black;
    height: 100%;
+   background-color: aliceblue;
 
 }
 .grid{
@@ -73,7 +78,7 @@ button:focus {
     outline: none;
 }
 button:hover{
-    background-color: yellow;
+    background-color: green;
 }
 #redPlay{
     color: red;
