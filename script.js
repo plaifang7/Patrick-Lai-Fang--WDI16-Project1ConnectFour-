@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    var player = 'red'
 
     // alert("Welcome to Connect 4! Choose a Game Mode.")
 
@@ -28,13 +27,13 @@ $(document).ready(function () {
 
         changeGVal: function (x) {
 
-            let newValue = 1;
+            let userVal = 1;
 
             if (userCount % 2 == 1) {
-                newValue = 1;
+                userVal = 1;
             }
             else {
-                newValue = 2;
+                userVal = 2;
             }
 
             for (let token = 0; token < 6; token++) {
@@ -42,42 +41,53 @@ $(document).ready(function () {
                     continue
                 }
                 else {
-                    gameBoard[token][x] = newValue;
+                    gameBoard[token][x] = userVal;
                     console.log(gameBoard)
 
-                    break
+
+                    var boardRow = token.toString()
+                    var boardRowName = ".row" + boardRow
+                    var boardCol = x.toString()
+                    var boardColName = ".col" + boardCol
+                    console.log(boardColName)
+                    console.log(boardRowName)
+
+
+                    const playerToken = $(boardColName + boardRowName)
+                    console.log(playerToken)
+                    if (userVal === 1) {
+                        $(playerToken).css('background-color', 'red')
+                    }
+                    else if (userVal === 2) {
+                        $(playerToken).css('background-color', 'yellow')
+
+                    }
+
                 }
 
-                var boardRow = token.toString()
-                var boardRowName = ".row" + boardRow
-                var boardCol = x.toString()
-                var boardColName = ".col" + boardCol
-               
-
-                var playerToken = function(boardColName, boardRowName){
-                    if(){
-                        $('gridrow').css("background-color")
-                    }
-                    else{
-
-                    }
-                }
 
 
-
-
-
+                userCount++
+                break
             }
 
 
+
+
+
+
+
         }
+
 
     }
 
 
 
 
-    //click function for player to drop checker. declared that there is an empty spot via check and then add checker in spot via removeCLass and addClass
+
+
+    //click function for player to drop checker. 
     $('.grid').click(function () {
         const colClick = $(this).attr('x')
 
