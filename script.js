@@ -26,7 +26,7 @@ $(document).ready(function () {
     //This const will change the value for each player in the array and will also allow my click function to change the colors in the grid for each player.
     const clickFunct = {
 
-        changeGVal: function () {
+        changeGVal: function (x) {
 
             let newValue = 1;
 
@@ -34,18 +34,39 @@ $(document).ready(function () {
                 newValue = 1;
             }
             else {
-
+                newValue = 2;
             }
 
             for (let token = 0; token < 6; token++) {
-                if (gameBoard[x][token] != 0) {
+                if (gameBoard[token][x] != 0) {
                     continue
                 }
                 else {
-                    gameBoard[x][token] = newValue;
+                    gameBoard[token][x] = newValue;
+                    console.log(gameBoard)
+
+                    break
                 }
 
-                
+                var boardRow = token.toString()
+                var boardRowName = ".row" + boardRow
+                var boardCol = x.toString()
+                var boardColName = ".col" + boardCol
+               
+
+                var playerToken = function(boardColName, boardRowName){
+                    if(){
+                        $('gridrow').css("background-color")
+                    }
+                    else{
+
+                    }
+                }
+
+
+
+
+
             }
 
 
@@ -60,7 +81,7 @@ $(document).ready(function () {
     $('.grid').click(function () {
         const colClick = $(this).attr('x')
 
-        clickFunct.playCheck(colClick)
+        clickFunct.changeGVal(colClick)
 
         console.log($(this).attr('x'))
 
