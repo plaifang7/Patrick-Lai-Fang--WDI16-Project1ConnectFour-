@@ -23,6 +23,22 @@ html{
     
     
 }
+.resetBtn{
+    display: block;
+    padding: 10px;
+    width: 125px;
+    margin: 10px auto;
+    background-color:green;
+    border-radius: 50px;
+    font-family: Raleway, sans-serif;
+
+}
+.resetBtn:hover{
+    background-color: red;
+}
+.resetBtn:focus{
+    outline: none;
+}
 .game-board{
     grid-column: 2 / 5;
     grid-row: 2 / 3;
@@ -32,6 +48,7 @@ html{
     height: 100%;
     width: 100%;
     background-color: green;
+    cursor: pointer;
   
 }
 .leftPanel{
@@ -53,7 +70,7 @@ html{
    grid-row: 2;
    border: 1px solid black;
    height: 100%;
-   background-color: aliceblue;
+   background-color: aquamarine;
 
 }
 .grid{
@@ -70,18 +87,7 @@ html{
 
 
 
-/* .gridrow-red{
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color:red;
-    margin: 5px;
-}
-.gridrow-yellow{
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: yellow;
-    margin: 5px;
-} */
+
 /* .gridrow:hover{
     background-color: rgb(255,99,71);
 } */
@@ -89,8 +95,8 @@ html{
 button {
     display: block;
     padding: 10px;
-    width: 100px;
-    margin: 0 auto;
+    width: 125px;
+    margin: 5px auto;
     background-color: red;
     border-radius: 50px;
     font-family: Raleway, sans-serif;

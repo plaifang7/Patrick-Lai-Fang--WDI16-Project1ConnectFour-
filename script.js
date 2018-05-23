@@ -98,8 +98,15 @@ $(document).ready(function () {
 
 
     })
+     $(' gridrow.none').on('mouseenter', function () {
+            const col = $(this).data('x')
+            var $checkEmpty = checkForEmptySlot(col)
+            $checkEmpty.addClass('move-red')
+            console.log(col);
 
+        })
 
+   
 
 
 
@@ -114,13 +121,7 @@ $(document).ready(function () {
 
 })
 //FOR LATER
- // for (let x = 0; x < gameboard.length; x++) {
-    //     if (player % 2 === 1) {
-    //         gameBoard[x].push(1)
-
-    //     }
-    //     else if (player % 2 === 0) {
-    //         gameBoard[x].push(2)
+ 
 
     // code to push a 1 or 2 into array if player takes their turn
     // for (let x = 0; x < gameBoard.length; x++) {
@@ -144,23 +145,10 @@ $(document).ready(function () {
         // })
 
 
-    // player turn
-    // if (player == 'yellow') {
-    //     player = 'red'
-    // }
-    // else {
-    //     player = 'yellow'
-    // }
+   
 
 //This code is for the future when I want the username input to work.
 // var userOne = document.getElementById("userOne").value;
 // var userTwo = document.getElementById("userTwo").value;
 
-  // $("game-board").mouseover(function(){
-    //     if (playerOne) {
-    //         grid.style.background = red;
-    //     }
-    //     else if(playerTwo){
-    //         grid.style.background = yellow;
-    //     }
-    // })
+ 
