@@ -67,9 +67,9 @@ html{
     background-color: white;
     margin: 5px;
 }
-.gridrow:hover{
+/* .gridrow:hover{
     background-color: rgb(255,99,71);
-}
+} */
 
 button {
     display: block;
