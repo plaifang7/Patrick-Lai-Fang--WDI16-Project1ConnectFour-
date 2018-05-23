@@ -10,40 +10,63 @@ $(document).ready(function () {
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0]
         ]
-        gameBoard.start();
-        console.log(gameBoard);
+
+        // console.log(gameBoard);
 
     }
-    playCheck = 1;
-    var clickFunct = (() => {
-        for (let x = 0; x < gameboard.length; x++) {
-            if (playCheck % 2 === 1) {
-                gameBoard.push(1)
 
+    //This will carry all functions for when the user hovers over the board and clicks a column.
+    var clickFunct = function () {
+        //checks for an empty  slot on the grid
+        function checkForEmptySlot(col) {
+            const slots = $(`.gridrow[x = '${col}']`)
+            for(let i = slots.length- 1; i>= 0; i--){
+                const $slots = $(slots[i])
+                if(slots.hasClass('none')){
+
+                }
             }
-            else if (playCheck % 2 === 0) {
-                gameBoard.push(2)
-            }
-            console.log(gameBoard);
+            console.log(slots)
         }
-        
-    })
 
-   
+        // this was supposed to create a hover effect
+
+        // $(' gridrow.none').on('mouseenter', function () {
+        //     const col = $(this).attr('x')
+        //     const $checkEmpty = checkForEmptySlot(col)
+        //     $checkEmpty.addClass('move-red')
+            // console.log(col);
+
+        // })
+    
+        //click function for player to drop checker
     $('.gridrow').click(function () {
-        $(this).attr('x')
-        // console.log($(this).attr('x'))
-        
+       const col = $(this).data('col')
+       const $checkEmpty = checkForEmptySlot(col)
+       $checkEmpty.removeClass('none')
+       $checkEmpty.addClass('p1')
        
 
+        // console.log($(this).attr('x'))
+
+
+
     })
 
+}
+clickFunct();
 
 
 
 
 
+    // for (let x = 0; x < gameboard.length; x++) {
+    //     if (playCheck % 2 === 1) {
+    //         gameBoard[x].push(1)
 
+    //     }
+    //     else if (playCheck % 2 === 0) {
+    //         gameBoard[x].push(2)
 
 
     // $("game-board").mouseover(function(){
