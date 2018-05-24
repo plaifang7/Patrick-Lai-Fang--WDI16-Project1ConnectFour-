@@ -84,80 +84,108 @@ $(document).ready(function () {
 
     // win algorithm
     checkEmptySlot = 0;
-    
-    const userWin = { 
-        for(let y = 0; y < 6; y++) {
-            for(let x = 0; x < 7; x++){
-                var user = gameBoard[y][x]
+    let user = gameBoard[y][x];
+   
+    const userWin = {
+
+        
            //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
-        scanEmpty: function() {
-            if(user == checkEmptySlot) {
-                continue
-            }
-        }
-        //this function reads the grid vertically and checks for a value of four in a row
-        winVertical: function(x,y) {
-            if(y + 3 < 6){
-                if(user == gameBoard[y+1][x] && user ==gameBoard[y+2][x] && user == gameBoard[y+3][x]){
-                    return user
-                    console.log("Player" + user + "is the Winner" )
+        slotEmpty: function () {
+            for (let y = 0; y < 6; y++) {
+                for (let x = 0; x < 7; x++) {
+                    if (user == checkEmptySlot) {
+                        continue
                     }
                 }
-               
-            
             }
-        }
-        // This will read the grid horizontally and look for four in a row
-        winHorizontal: function(x,y) {
-            if(x+ 3 < 7){
-                if(user == gameBoard[y][x+1] && user == gameBoard[y][x+2] && user == gameBoard[y][x+3]){
-                    return user
-            console.log("Player" + user + "is the Winner" )
+        },
+        //this function reads the grid vertically and checks for a value of four in a row
+        winVertical: function (x, y) {
+            for (let y = 0; y < 6; y++) {
+                for (let x = 0; x < 7; x++) {
+                    if (y + 3 < 6) {
+                        if (user == gameBoard[y + 1][x] && user == gameBoard[y + 2][x] && user == gameBoard[y + 3][x]) {
+                            return user
+                            console.log("Player" + user + "is the Winner")
+                        }
+                    }
                 }
             }
-            
-        }
-        //this will read the grid diagonally up and left and look for 4 in a row
-        winDiagUL: function(x,y) {
-            if(c - 3 >= 0 && user == gameBoard[y+1][x-1] && user == gameBoard[y+2][x-2] && user gameBoard[y+3][x-3]){
-                return user
-                console.log("Player" + user + "is the Winner" )
+
+        },
+
+    // This will read the grid horizontally and look for four in a row
+    winHorizontal: function (x, y) {
+            for (let y = 0; y < 6; y++) {
+                for (let x = 0; x < 7; x++) {
+                    if (x + 3 < 7) {
+                        if (user == gameBoard[y][x + 1] && user == gameBoard[y][x + 2] && user == gameBoard[y][x + 3]) {
+                            return user
+                            console.log("Player" + user + "is the Winner")
+                        }
+                    }
+
+                }
             }
-
+        },
+            //this will read the grid diagonally up and left and look for 4 in a row
+            winDiagUL: function (x, y) {
+            for (let y = 0; y < 6; y++) {
+                for (let x = 0; x < 7; x++) {
+                    if (x - 3 >= 0 && user == gameBoard[y + 1][x - 1] && user == gameBoard[y + 2][x - 2] && user gameBoard[y + 3][x - 3]){
+    return user;
+    console.log("Player" + user + "is the Winner");
+} 
         }
-        //this will read the grid diagonally up and right  and look for four in a row
-        winDiagUR: function(x,y) {
-            if(c + 3 < 7 && user == gameBoard[y+1][x+1]user == gameBoard[y+2][x+2] && user gameBoard[y+3][x+3]){
-                return user
-                console.log("Player" + user + "is the Winner")
+    }
+        },
+//this will read the grid diagonally up and right  and look for four in a row
+winDiagUR: function(x, y) {
+    for (let y = 0; y < 6; y++) {
+        for (let x = 0; x < 7; x++) {
+            if (x + 3 < 7 && user == gameBoard[y + 1][x + 1]user == gameBoard[y + 2][x + 2] && user gameBoard[y + 3][x + 3]) {
+                return user;
+                console.log("Player" + user + "is the Winner");
             }
         }
-
-
     }
-        
-   
+}
 
-    return checkEmptySlot
+
+
+
+return checkEmptySlot
+
+}
+
+
+
+if(userWin == true){
+    if (userVal == 1){
+        alert("Player 1 Wins!")
     }
-    
-    
+    else{
+        alert("Player 2 Wins!")
+    }
+
+}
 
 
 
 
 
-    //click function for player to drop checker. 
-    $('.grid').click(function () {
-        const colClick = $(this).attr('x')
 
-        clickFunct.changeGVal(colClick)
+//click function for player to drop checker. 
+$('.grid').click(function () {
+    const colClick = $(this).attr('x')
 
-        console.log($(this).attr('x'))
+    clickFunct.changeGVal(colClick)
+
+    console.log($(this).attr('x'))
 
 
 
-    })
+})
 
    
 
@@ -201,10 +229,9 @@ $(document).ready(function () {
         // })
 
 
-   
+
 
 //This code is for the future when I want the username input to work.
 // var userOne = document.getElementById("userOne").value;
 // var userTwo = document.getElementById("userTwo").value;
 
- 
