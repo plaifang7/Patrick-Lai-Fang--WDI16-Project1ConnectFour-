@@ -6,7 +6,7 @@ This project is my version of Connect Four. I decided to challenge myself by cho
 This choice as a Project 1 scares me and I am willing to accept the challenge and prove myself. I figure, if I can get through this prject and complete it, the other projects will be just like this one. Which means I will be able to complete them.
 
 
-BitBalloon url:
+BitBalloon url: https://www.bitballoon.com/sites/boring-poincare-9c6f07
 
 Trello url: https://trello.com/b/XhjATeAF/wdi16-project-1-connect-four
 
