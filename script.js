@@ -82,7 +82,7 @@ $(document).ready(function () {
 
     }
 
-
+    // win algorithm
     checkEmptySlot = 0;
     
     const userWin = { 
@@ -90,13 +90,13 @@ $(document).ready(function () {
             for(let x = 0; x < 7; x++){
                 var user = gameBoard[y][x]
            //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
-        scanEMpty: function() {
+        scanEmpty: function() {
             if(user == checkEmptySlot) {
                 continue
             }
         }
         //this function reads the grid vertically and checks for a value of four in a row
-        winVertical: function() {
+        winVertical: function(x,y) {
             if(y + 3 < 6){
                 if(user == gameBoard[y+1][x] && user ==gameBoard[y+2][x] && user == gameBoard[y+3][x])
             }
@@ -104,21 +104,24 @@ $(document).ready(function () {
             console.log("Player" + user + "is the Winner" )
 
         },
-        winHorizontal: function() {
+        // This will read the grid horizontally and look for four in a row
+        winHorizontal: function(x,y) {
             if(x+ 3 < 7){
                 if(user == gameBoard[y][x+1] && user == gameBoard[y][x+2] && user == gameBoard[y][x+3])
             }
             return user
             console.log("Player" + user + "is the Winner" )
         },
-        winDiagUL: function() {
+        //this will read the grid diagonally up and left and look for 4 in a row
+        winDiagUL: function(x,y) {
             if(c - 3 >= 0 && user == gameBoard[y+1][x-1] && user == gameBoard[y+2][x-2] && user gameBoard[y+3][x-3]){
                 return user
                 console.log("Player" + user + "is the Winner" )
             }
 
         },
-        winDiagUR: function() {
+        //this will read the grid diagonally up and right  and look for four in a row
+        winDiagUR: function(x,y) {
             if(c + 3 < 7 && user == gameBoard[y+1][x+1]user == gameBoard[y+2][x+2] && user gameBoard[y+3][x+3]){
                 return user
                 console.log("Player" + user + "is the Winner")
