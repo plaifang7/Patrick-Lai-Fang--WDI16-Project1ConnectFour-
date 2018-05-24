@@ -83,6 +83,58 @@ $(document).ready(function () {
     }
 
 
+    checkEmptySlot = 0;
+    
+    const userWin = { 
+        for(let y = 0; y < 6; y++) {
+            for(let x = 0; x < 7; x++){
+                var user = gameBoard[y][x]
+           //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
+        scanEMpty: function() {
+            if(user == checkEmptySlot) {
+                continue
+            }
+        }
+        //this function reads the grid vertically and checks for a value of four in a row
+        winVertical: function() {
+            if(y + 3 < 6){
+                if(user == gameBoard[y+1][x] && user ==gameBoard[y+2][x] && user == gameBoard[y+3][x])
+            }
+            return user
+            console.log("Player" + user + "is the Winner" )
+
+        },
+        winHorizontal: function() {
+            if(x+ 3 < 7){
+                if(user == gameBoard[y][x+1] && user == gameBoard[y][x+2] && user == gameBoard[y][x+3])
+            }
+            return user
+            console.log("Player" + user + "is the Winner" )
+        },
+        winDiagUL: function() {
+            if(c - 3 >= 0 && user == gameBoard[y+1][x-1] && user == gameBoard[y+2][x-2] && user gameBoard[y+3][x-3]){
+                return user
+                console.log("Player" + user + "is the Winner" )
+            }
+
+        },
+        winDiagUR: function() {
+            if(c + 3 < 7 && user == gameBoard[y+1][x+1]user == gameBoard[y+2][x+2] && user gameBoard[y+3][x+3]){
+                return user
+                console.log("Player" + user + "is the Winner")
+            }
+        }
+
+
+    }
+        
+   
+
+
+    }
+    return checkEmptySlot
+    }
+
 
 
 
@@ -98,30 +150,26 @@ $(document).ready(function () {
 
 
     })
-     $(' gridrow.none').on('mouseenter', function () {
-            const col = $(this).data('x')
-            var $checkEmpty = checkForEmptySlot(col)
-            $checkEmpty.addClass('move-red')
-            console.log(col);
-
-        })
 
    
 
 
 
-
-
-
-
-
-
+    
 
 
 
 })
+
 //FOR LATER
- 
+    //  $(' gridrow.none').on('mouseenter', function () {
+    //         const col = $(this).data('x')
+    //         var $checkEmpty = checkForEmptySlot(col)
+    //         $checkEmpty.addClass('move-red')
+    //         console.log(col);
+
+    //     })
+
 
     // code to push a 1 or 2 into array if player takes their turn
     // for (let x = 0; x < gameBoard.length; x++) {
