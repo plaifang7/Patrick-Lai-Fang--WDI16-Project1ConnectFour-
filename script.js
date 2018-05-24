@@ -35,6 +35,7 @@ $(document).ready(function () {
             else {
                 userVal = 2;
             }
+            
 
             for (let token = 0; token < 6; token++) {
                 if (gameBoard[token][x] != 0) {
@@ -64,6 +65,7 @@ $(document).ready(function () {
                     }
 
                 }
+                
 
 
 
@@ -71,7 +73,18 @@ $(document).ready(function () {
                 break
             }
 
-
+            for(i =0; i < gameBoard.length; i++){
+                    for(k = 0; k < gameBoard[i].length; k++){
+                        let row = gameBoard[i]
+                        let column = gameBoard[i][k]
+                        console.log("hello")
+                        userWin.winVertical(row,column)
+                        if(row === column){
+                            break
+                        }
+                    }
+                
+                }
 
 
 
@@ -82,31 +95,36 @@ $(document).ready(function () {
 
     }
 
-    // win algorithm
+    // // win algorithm
     checkEmptySlot = 0;
-    let user = gameBoard[y][x];
-   
+    
+
     const userWin = {
 
         
-           //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
-        slotEmpty: function () {
-            for (let y = 0; y < 6; y++) {
-                for (let x = 0; x < 7; x++) {
-                    if (user == checkEmptySlot) {
-                        continue
-                    }
-                }
-            }
-        },
+   //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
+        // slotEmpty: function () {
+        //     for (let y = 0; y < 6; y++) {
+        //         for (let x = 0; x < 7; x++) {
+        //             if (user == checkEmptySlot) {
+        //                 continue
+        //             }
+        //         }
+        //     }
+        // },
+
         //this function reads the grid vertically and checks for a value of four in a row
         winVertical: function (x, y) {
             for (let y = 0; y < 6; y++) {
                 for (let x = 0; x < 7; x++) {
                     if (y + 3 < 6) {
-                        if (user == gameBoard[y + 1][x] && user == gameBoard[y + 2][x] && user == gameBoard[y + 3][x]) {
-                            return user
-                            console.log("Player" + user + "is the Winner")
+                        if (gameBoard[y][x] === gameBoard[y + 1][x] 
+                            && gameBoard[y][x] ===  gameBoard[y + 2][x]  
+                            && gameBoard[y][x] === gameBoard[y + 3][x]  
+                            && gameBoard[y][x] != 0) {
+                            console.log("Player is the Winner")
+                            return gameBoard[y][x]
+                           
                         }
                     }
                 }
@@ -114,61 +132,75 @@ $(document).ready(function () {
 
         },
 
-    // This will read the grid horizontally and look for four in a row
-    winHorizontal: function (x, y) {
+        // This will read the grid horizontally and look for four in a row
+        winHorizontal: function (x, y) {
             for (let y = 0; y < 6; y++) {
                 for (let x = 0; x < 7; x++) {
                     if (x + 3 < 7) {
-                        if (user == gameBoard[y][x + 1] && user == gameBoard[y][x + 2] && user == gameBoard[y][x + 3]) {
-                            return user
-                            console.log("Player" + user + "is the Winner")
+                        if ( gameBoard[y][x] === gameBoard[y][x + 1]  
+                            && gameBoard[y][x] === gameBoard[y][x + 2] 
+                            && gameBoard[y][x] === gameBoard[y][x + 3] 
+                            && gameboard[y[x] != 0]) {
+                            console.log("Player is the Winner")
+                            return gameBoard[y][x]
+                            
                         }
                     }
 
                 }
             }
         },
-            //this will read the grid diagonally up and left and look for 4 in a row
-            winDiagUL: function (x, y) {
+        //this will read the grid diagonally up and left and look for 4 in a row
+        winDiagUL: function (x, y) {
             for (let y = 0; y < 6; y++) {
                 for (let x = 0; x < 7; x++) {
-                    if (x - 3 >= 0 && user == gameBoard[y + 1][x - 1] && user == gameBoard[y + 2][x - 2] && user gameBoard[y + 3][x - 3]){
-    return user;
-    console.log("Player" + user + "is the Winner");
-} 
-        }
-    }
+                    if (x - 3 >= 0
+                        && gameBoard[y][x] === gameBoard[y + 1][x - 1]
+                        && gameBoard[y][x] === gameBoard[y + 2][x - 2]
+                        && gameBoard[y][x] === gameBoard[y + 3][x - 3]
+                        && gameBoard != 0) {
+                        console.log("Player is the Winner");
+                        return gameBoard[y][x];
+                        
+                    }
+                }
+            }
         },
-//this will read the grid diagonally up and right  and look for four in a row
-winDiagUR: function(x, y) {
-    for (let y = 0; y < 6; y++) {
-        for (let x = 0; x < 7; x++) {
-            if (x + 3 < 7 && user == gameBoard[y + 1][x + 1]user == gameBoard[y + 2][x + 2] && user gameBoard[y + 3][x + 3]) {
-                return user;
-                console.log("Player" + user + "is the Winner");
+        //this will read the grid diagonally up and right  and look for four in a row
+        winDiagUR: function (x, y) {
+            for (let y = 0; y < 6; y++) {
+                for (let x = 0; x < 7; x++) {
+                    if (x + 3 < 7 
+                        && gameBoard[y][x] === gameBoard[y + 1][x + 1] 
+                        && gameBoard[y][x] === gameBoard[y + 2][x + 2] 
+                        && gameBoard[y][x] === gameBoard[y + 3][x + 3]
+                        && gameBoard[y][x] != 0) {
+                        console.log("Player is the Winner");
+                        return gameBoard[y][x];
+                        
+                    }
+                }
             }
         }
+        
     }
-}
+ 
+        
 
 
 
 
-return checkEmptySlot
-
-}
 
 
+// if (userWin == true) {
+//     if (userVal == 1) {
+//         alert("Player 1 Wins!")
+//     }
+//     else {
+//         alert("Player 2 Wins!")
+//     }
 
-if(userWin == true){
-    if (userVal == 1){
-        alert("Player 1 Wins!")
-    }
-    else{
-        alert("Player 2 Wins!")
-    }
-
-}
+// }
 
 
 
@@ -187,15 +219,8 @@ $('.grid').click(function () {
 
 })
 
-   
+})   
 
-
-
-    
-
-
-
-})
 
 //FOR LATER
     //  $(' gridrow.none').on('mouseenter', function () {
