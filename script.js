@@ -125,6 +125,7 @@ $(document).ready(function () {
                     && gameBoard[y][x] === gameBoard[y + 3][x]
                     && gameBoard[y][x] != 0) {
                     // console.log("Player is the Winner")
+                    alert("We have a winner!")
                     return gameBoard[y][x]
 
                 }
@@ -146,7 +147,8 @@ $(document).ready(function () {
                     && gameBoard[y][x] === gameBoard[y][x + 2]
                     && gameBoard[y][x] === gameBoard[y][x + 3]
                     && gameBoard[y][x] != 0) {
-                    console.log("Player is the Winner")
+                    // console.log("Player is the Winner")
+                    alert("We have a winner!")
                     return gameBoard[y][x];
 
                 }
@@ -167,6 +169,7 @@ $(document).ready(function () {
                 && gameBoard[y][x] === gameBoard[y + 3][x - 3]
                 && gameBoard[y][x] != 0) {
                 // console.log("Player is the Winner");
+                alert("We have a winner!")
                 return gameBoard[y][x];
                 }
             }
@@ -183,6 +186,7 @@ $(document).ready(function () {
                 && gameBoard[y][x] === gameBoard[y + 3][x + 3]
                 && gameBoard[y][x] != 0) {
                 // console.log("Player is the Winner");
+                alert("We have a winner!")
                 return gameBoard[y][x];
                 }
             }
