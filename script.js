@@ -35,7 +35,7 @@ $(document).ready(function () {
             else {
                 userVal = 2;
             }
-            
+
 
             for (let token = 0; token < 6; token++) {
                 if (gameBoard[token][x] != 0) {
@@ -65,7 +65,7 @@ $(document).ready(function () {
                     }
 
                 }
-                
+
 
 
 
@@ -73,18 +73,51 @@ $(document).ready(function () {
                 break
             }
 
-            for(i =0; i < gameBoard.length; i++){
-                    for(k = 0; k < gameBoard[i].length; k++){
-                        let row = gameBoard[i]
-                        let column = gameBoard[i][k]
-                        console.log("hello")
-                        userWin.winVertical(row,column)
-                        if(row === column){
-                            break
-                        }
-                    }
-                
+            for (i = 0; i < gameBoard.length; i++) {
+                for (k = 0; k < gameBoard[i].length; k++) {
+                    // let row = gameBoard[i]
+                    // let column = gameBoard[i][k]
+                    // console.log("hello")
+                    userWin.winVertical(i, k)
+                    userWin.winHorizontal(i, k)
+                    userWin.winDiagUL(i, k)
+                    userWin.winDiagUR(i, k)
                 }
+
+            }
+
+            // for(i =0; i < gameBoard.length; i++){
+            //     for(k = 0; k < gameBoard[i].length; k++){
+            //         let row = gameBoard[i]
+            //         let column = gameBoard[i][k]
+            //         // console.log("hello")
+
+
+            //     }
+
+            // }
+
+            // for(i =0; i < gameBoard.length; i++){
+            //     for(k = 0; k < gameBoard[i].length; k++){
+            //         let row = gameBoard[i]
+            //         let column = gameBoard[i][k]
+            //         // console.log("hello")
+            //         userWin.winDiagUL(row,column)
+
+            //     }
+
+            // }
+
+            // for(i =0; i < gameBoard.length; i++){
+            //     for(k = 0; k < gameBoard[i].length; k++){
+            //         let row = gameBoard[i]
+            //         let column = gameBoard[i][k]
+            //         // console.log("hello")
+            //         userWin.winDiagUR(row,column)
+
+            //     }
+
+            // }
 
 
 
@@ -97,12 +130,12 @@ $(document).ready(function () {
 
     // // win algorithm
     checkEmptySlot = 0;
-    
+
 
     const userWin = {
 
-        
-   //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
+
+        //this function scans the board for empty sections and then tells computer that empty slots are not included in final search for winner by using continue.     
         // slotEmpty: function () {
         //     for (let y = 0; y < 6; y++) {
         //         for (let x = 0; x < 7; x++) {
@@ -115,111 +148,110 @@ $(document).ready(function () {
 
         //this function reads the grid vertically and checks for a value of four in a row
         winVertical: function (x, y) {
-            for (let y = 0; y < 6; y++) {
-                for (let x = 0; x < 7; x++) {
-                    if (y + 3 < 6) {
-                        if (gameBoard[y][x] === gameBoard[y + 1][x] 
-                            && gameBoard[y][x] ===  gameBoard[y + 2][x]  
-                            && gameBoard[y][x] === gameBoard[y + 3][x]  
-                            && gameBoard[y][x] != 0) {
-                            console.log("Player is the Winner")
-                            return gameBoard[y][x]
-                           
-                        }
-                    }
+            // for (let y = 0; y < 6; y++) {
+            //     for (let x = 0; x < 7; x++) {
+            if (y + 3 < 6) {
+                if (gameBoard[y][x] === gameBoard[y + 1][x]
+                    && gameBoard[y][x] === gameBoard[y + 2][x]
+                    && gameBoard[y][x] === gameBoard[y + 3][x]
+                    && gameBoard[y][x] != 0) {
+                    console.log("Player is the Winner")
+                    return gameBoard[y][x]
+
                 }
             }
+            //     }
+            // }
 
         },
 
         // This will read the grid horizontally and look for four in a row
         winHorizontal: function (x, y) {
-            for (let y = 0; y < 6; y++) {
-                for (let x = 0; x < 7; x++) {
-                    if (x + 3 < 7) {
-                        if ( gameBoard[y][x] === gameBoard[y][x + 1]  
-                            && gameBoard[y][x] === gameBoard[y][x + 2] 
-                            && gameBoard[y][x] === gameBoard[y][x + 3] 
-                            && gameboard[y[x] != 0]) {
-                            console.log("Player is the Winner")
-                            return gameBoard[y][x]
-                            
-                        }
-                    }
+            // for (let y = 0; y < 6; y++) {
+            //     for (let x = 0; x < 7; x++) {
+            if (x + 3 <= 7) {
+                if (gameBoard[y][x] === gameBoard[y][x + 1]
+                    && gameBoard[y][x] === gameBoard[y][x + 2]
+                    && gameBoard[y][x] === gameBoard[y][x + 3]
+                    && gameBoard[y[x] != 0]) {
+                    console.log("Player is the Winner")
+                    return gameBoard[y][x];
 
                 }
             }
+
+
         },
         //this will read the grid diagonally up and left and look for 4 in a row
         winDiagUL: function (x, y) {
-            for (let y = 0; y < 6; y++) {
-                for (let x = 0; x < 7; x++) {
-                    if (x - 3 >= 0
-                        && gameBoard[y][x] === gameBoard[y + 1][x - 1]
-                        && gameBoard[y][x] === gameBoard[y + 2][x - 2]
-                        && gameBoard[y][x] === gameBoard[y + 3][x - 3]
-                        && gameBoard != 0) {
-                        console.log("Player is the Winner");
-                        return gameBoard[y][x];
-                        
-                    }
+            // for (let y = 0; y < 6; y++) {
+            //     for (let x = 0; x < 7; x++) {
+            if (x - 3 >= 0) {
+                if (gameBoard[y][x] === gameBoard[y + 1][x - 1]
+                && gameBoard[y][x] === gameBoard[y + 2][x - 2]
+                && gameBoard[y][x] === gameBoard[y + 3][x - 3]
+                && gameBoard[y][x] != 0) {
+                console.log("Player is the Winner");
+                return gameBoard[y][x];
                 }
             }
+
+
         },
         //this will read the grid diagonally up and right  and look for four in a row
         winDiagUR: function (x, y) {
-            for (let y = 0; y < 6; y++) {
-                for (let x = 0; x < 7; x++) {
-                    if (x + 3 < 7 
-                        && gameBoard[y][x] === gameBoard[y + 1][x + 1] 
-                        && gameBoard[y][x] === gameBoard[y + 2][x + 2] 
-                        && gameBoard[y][x] === gameBoard[y + 3][x + 3]
-                        && gameBoard[y][x] != 0) {
-                        console.log("Player is the Winner");
-                        return gameBoard[y][x];
-                        
-                    }
+            // for (let y = 0; y < 6; y++) {
+            //     for (let x = 0; x < 7; x++) {
+            if (x + 3 <= 7 && y + 3 < 6){
+                if(gameBoard[y][x] === gameBoard[y + 1][x + 1]
+                && gameBoard[y][x] === gameBoard[y + 2][x + 2]
+                && gameBoard[y][x] === gameBoard[y + 3][x + 3]
+                && gameBoard[y][x] != 0) {
+                console.log("Player is the Winner");
+                return gameBoard[y][x];
                 }
             }
         }
-        
+
+
+
     }
- 
-        
 
 
 
 
 
 
-// if (userWin == true) {
-//     if (userVal == 1) {
-//         alert("Player 1 Wins!")
-//     }
-//     else {
-//         alert("Player 2 Wins!")
-//     }
-
-// }
 
 
+    // if (userWin == true) {
+    //     if (userVal == 1) {
+    //         alert("Player 1 Wins!")
+    //     }
+    //     else {
+    //         alert("Player 2 Wins!")
+    //     }
+
+    // }
 
 
 
 
-//click function for player to drop checker. 
-$('.grid').click(function () {
-    const colClick = $(this).attr('x')
-
-    clickFunct.changeGVal(colClick)
-
-    console.log($(this).attr('x'))
 
 
+    //click function for player to drop checker. 
+    $('.grid').click(function () {
+        const colClick = $(this).attr('x')
+
+        clickFunct.changeGVal(colClick)
+
+        console.log($(this).attr('x'))
+
+
+
+    })
 
 })
-
-})   
 
 
 //FOR LATER
