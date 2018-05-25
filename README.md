@@ -11,6 +11,8 @@ BitBalloon url: https://www.bitballoon.com/sites/boring-poincare-9c6f07
 
 Trello url: https://trello.com/b/XhjATeAF/wdi16-project-1-connect-four
 
-Wireframe (Simple): included in Trello
-
+<p> 
+  <h4>Wireframe (Simple):</h4>
+  <img src="https://imgur.com/q8n4ekU", alt="Wireframe">
+</p>
 Technologies, Libraries, and/or Frameworks: CSS Grid, jQuery, JavaScript
