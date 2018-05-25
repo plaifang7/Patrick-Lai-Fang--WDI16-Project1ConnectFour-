@@ -1,4 +1,4 @@
-# Patrick-Lai-Fang--WDI16-Project1ConnectFour-
+<h1> Patrick-Lai-Fang-WDI16 Project 1 Connect Four</h1>
 This project is my version of Connect Four. I decided to challenge myself by choosing one of the harder ones because of one of the quotes on the wall in GA:
 
 "Do one thing every day that SCARES You." - Eleanor Roosevelt
