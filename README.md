@@ -1,9 +1,10 @@
 <h1> Patrick-Lai-Fang-WDI16 Project 1 Connect Four</h1>
-This project is my version of Connect Four. I decided to challenge myself by choosing one of the harder ones because of one of the quotes on the wall in GA:
 
-"Do one thing every day that SCARES You." - Eleanor Roosevelt
+<p>This project is my version of Connect Four. I decided to challenge myself by choosing one of the harder ones because of one of the quotes on the wall in GA:
 
-This choice as a Project 1 scares me and I am willing to accept the challenge and prove myself. I figure, if I can get through this prject and complete it, the other projects will be just like this one. Which means I will be able to complete them.
+<h2>"Do one thing every day that SCARES You." - Eleanor Roosevelt</h2>
+
+This choice as a Project 1 scares me and I am willing to accept the challenge and prove myself. I figure, if I can get through this prject and complete it, the other projects will be just like this one. Which means I will be able to complete them.</p>
 
 
 BitBalloon url: https://www.bitballoon.com/sites/boring-poincare-9c6f07
