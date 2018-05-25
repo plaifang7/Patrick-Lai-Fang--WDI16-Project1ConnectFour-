@@ -9,8 +9,8 @@ $(document).ready(function () {
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
-        
-        
+
+
     ]
 
 
@@ -88,7 +88,7 @@ $(document).ready(function () {
 
             }
 
-            
+
 
 
 
@@ -119,7 +119,7 @@ $(document).ready(function () {
         winVertical: function (x, y) {
             // for (let y = 0; y < 6; y++) {
             //     for (let x = 0; x < 7; x++) {
-            if (y + 3 < 6) {
+            if (y + 3 < 6 && x + 3 < 7) {
                 if (gameBoard[y][x] === gameBoard[y + 1][x]
                     && gameBoard[y][x] === gameBoard[y + 2][x]
                     && gameBoard[y][x] === gameBoard[y + 3][x]
@@ -139,9 +139,9 @@ $(document).ready(function () {
         winHorizontal: function (x, y) {
             // for (let y = 0; y < 6; y++) {
             //     for (let x = 0; x < 7; x++) {
-                // console.log(gameBoard)
-                // console.log("x", x)
-                // console.log("y", y)
+            // console.log(gameBoard)
+            // console.log("x", x)
+            // console.log("y", y)
             if (y + 3 < 6 && x + 3 < 7) {
                 if (gameBoard[y][x] === gameBoard[y][x + 1]
                     && gameBoard[y][x] === gameBoard[y][x + 2]
@@ -160,17 +160,17 @@ $(document).ready(function () {
         winDiagUL: function (x, y) {
             // for (let y = 0; y < 6; y++) {
             //     for (let x = 0; x < 7; x++) {
-                
-            if (y - 3 >= 0 ) {
+
+            if (y - 3 >= 0) {
                 // console.log("y",y)
                 // console.log("x", x)
                 if (gameBoard[y][x] === gameBoard[y + 1][x - 1]
-                && gameBoard[y][x] === gameBoard[y + 2][x - 2]
-                && gameBoard[y][x] === gameBoard[y + 3][x - 3]
-                && gameBoard[y][x] != 0) {
-                // console.log("Player is the Winner");
-                alert("We have a winner!")
-                return gameBoard[y][x];
+                    && gameBoard[y][x] === gameBoard[y + 2][x - 2]
+                    && gameBoard[y][x] === gameBoard[y + 3][x - 3]
+                    && gameBoard[y][x] != 0) {
+                    // console.log("Player is the Winner");
+                    alert("We have a winner!")
+                    return gameBoard[y][x];
                 }
             }
 
@@ -180,14 +180,14 @@ $(document).ready(function () {
         winDiagUR: function (x, y) {
             // for (let y = 0; y < 6; y++) {
             //     for (let x = 0; x < 7; x++) {
-            if (x + 3 < 7 && y + 3 < 6){
-                if(gameBoard[y][x] === gameBoard[y + 1][x + 1]
-                && gameBoard[y][x] === gameBoard[y + 2][x + 2]
-                && gameBoard[y][x] === gameBoard[y + 3][x + 3]
-                && gameBoard[y][x] != 0) {
-                // console.log("Player is the Winner");
-                alert("We have a winner!")
-                return gameBoard[y][x];
+            if (x + 3 < 7 && y + 3 < 6) {
+                if (gameBoard[y][x] === gameBoard[y + 1][x + 1]
+                    && gameBoard[y][x] === gameBoard[y + 2][x + 2]
+                    && gameBoard[y][x] === gameBoard[y + 3][x + 3]
+                    && gameBoard[y][x] != 0) {
+                    // console.log("Player is the Winner");
+                    alert("We have a winner!")
+                    return gameBoard[y][x];
                 }
             }
         }
