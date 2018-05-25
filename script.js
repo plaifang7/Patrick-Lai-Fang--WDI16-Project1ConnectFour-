@@ -142,7 +142,7 @@ $(document).ready(function () {
                 // console.log(gameBoard)
                 // console.log("x", x)
                 // console.log("y", y)
-            if (y + 3 < 7) {
+            if (y + 3 < 6 && x + 3 < 7) {
                 if (gameBoard[y][x] === gameBoard[y][x + 1]
                     && gameBoard[y][x] === gameBoard[y][x + 2]
                     && gameBoard[y][x] === gameBoard[y][x + 3]
@@ -162,8 +162,8 @@ $(document).ready(function () {
             //     for (let x = 0; x < 7; x++) {
                 
             if (y - 3 >= 0 ) {
-                console.log("y",y)
-                console.log("x", x)
+                // console.log("y",y)
+                // console.log("x", x)
                 if (gameBoard[y][x] === gameBoard[y + 1][x - 1]
                 && gameBoard[y][x] === gameBoard[y + 2][x - 2]
                 && gameBoard[y][x] === gameBoard[y + 3][x - 3]
