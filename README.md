@@ -16,4 +16,5 @@ Trello url: https://trello.com/b/XhjATeAF/wdi16-project-1-connect-four
   <a href="https://imgur.com/q8n4ekU", target="_blank">
   <img src="https://imgur.com/q8n4ekU", alt="Wireframe">
 </p>
+
 Technologies, Libraries, and/or Frameworks: CSS Grid, jQuery, JavaScript
