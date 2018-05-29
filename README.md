@@ -11,10 +11,6 @@ BitBalloon url: https://connectfourbyplf.bitballoon.com
 
 Trello url: https://trello.com/b/XhjATeAF/wdi16-project-1-connect-four
 
-<p> 
-  <h4>Wireframe (Simple):</h4>
-  <a href="https://imgur.com/q8n4ekU", target="_blank">
-  <img src="https://imgur.com/q8n4ekU", alt="Wireframe">
-</p>
+Wireframe (Simple):https://imgur.com/q8n4ekU
 
 Technologies, Libraries, and/or Frameworks: CSS Grid, jQuery, JavaScript
